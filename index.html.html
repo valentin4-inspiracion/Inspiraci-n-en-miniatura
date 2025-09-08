@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Inspiración en Miniatura — Mini cuadros en arcilla</title>
+  <meta name="description" content="Mini cuadros artesanales en arcilla con mensajes de motivación. Personalizables y hechos a mano." />
+  <style>
+    :root{
+      --bg:#e58db1;
+      --accent:#361702;
+      --muted:#6fedbd;
+      --card:#fff;
+      --glass: rgba(255,255,255,0.6);
+      --maxw:1100px; font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      --cuadro-size: 7.5cm;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:#222}
+    .container{max-width:var(--maxw);margin:0 auto;padding:28px}
+
+    header{padding:36px 0;display:flex;align-items:center;justify-content:space-between}
+    header .brand{display:flex;align-items:center;gap:14px}
+    #logo{width:86px;height:86px;border-radius:12px;object-fit:cover;background:var(--card);display:block;padding:10px}
+    h1{font-size:28px;margin:0;color:var(--accent)}
+    p.lead{color:var(--muted);margin:6px 0 0}
+
+    .cta{margin-top:18px}
+    .btn{background:var(--accent);color:white;padding:10px 16px;border-radius:10px;border:0;cursor:pointer;font-weight:600}
+
+    section{padding:36px 0;border-top:1px solid rgba(255,255,255,0.2)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+
+    .card{background:var(--card);border-radius:14px;padding:14px;box-shadow:0 6px 20px rgba(20,20,20,0.06);}
+    .mini{width:var(--cuadro-size);height:var(--cuadro-size);border-radius:10px;display:block;object-fit:cover}
+    .price{font-weight:700;color:var(--accent)}
+
+    form{display:grid;gap:10px;align-items:start}
+    label{font-size:14px;color:var(--muted)}
+    input[type=text], textarea, select{padding:10px;border-radius:8px;border:1px solid #eee}
+
+    nav.sections-nav{background:var(--card);padding:12px 20px;border-radius:12px;margin-bottom:20px;display:flex;gap:12px;flex-wrap:wrap;box-shadow:0 4px 12px rgba(0,0,0,0.1)}
+    nav.sections-nav a{color:var(--accent);font-weight:600;text-decoration:none}
+    nav.sections-nav a:hover{text-decoration:underline}
+
+    footer{padding:28px 0;color:var(--muted);font-size:14px;text-align:center}
+
+    @media (max-width:720px){
+      header{flex-direction:column;align-items:flex-start;gap:12px}
+      #logo{width:72px;height:72px}
+      h1{font-size:22px}
+      .mini{width:6cm;height:6cm}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- NAVEGACIÓN ENTRE SECCIONES -->
+    <nav class="sections-nav">
+      <span style="font-weight:700;color:var(--accent);margin-right:20px;">Inspiración en Miniatura</span>
+      <a href="#bienvenida-inicial">Bienvenida</a>
+      <a href="#bienvenida-secundaria">Inspiración</a>
+      <a href="#about">Sobre nosotros</a>
+      <a href="#galeria">Galería</a>
+      <a href="#contact">Pedido</a>
+      <a href="#testimonios">Testimonios</a>
+    </nav>
+
+    <!-- BIENVENIDA INICIAL -->
+    <section id="bienvenida-inicial">
+      <h2 style="color:var(--accent)">¡Bienvenido a Inspiración en Miniatura!</h2>
+      <p style="color:var(--muted)">Descubre nuestros mini cuadros en arcilla, hechos con amor y dedicación, perfectos para motivarte o regalar a alguien especial. Cada pieza es única y personalizable.</p>
+      <div class="cta"><button class="btn" onclick="document.getElementById('galeria').scrollIntoView({behavior:'smooth'})">Explora la galería</button></div>
+    </section>
+
+    <!-- SEGUNDA BIENVENIDA -->
+    <section id="bienvenida-secundaria">
+      <h2 style="color:var(--accent)">¡Explora la creatividad en miniatura!</h2>
+      <p style="color:var(--muted)">Nuestros mini cuadros no solo son decorativos, sino que llevan mensajes que inspiran. Personaliza el tuyo y añade un toque especial a tu espacio o al de alguien querido.</p>
+    </section>
+
+    <!-- HEADER / HERO -->
+    <header>
+      <div class="brand">
+        <img id="logo" src="logo.png" alt="Logo Inspiración en Miniatura" />
+        <div>
+          <h1>Inspiración en Miniatura</h1>
+          <p class="lead">Mini cuadros en arcilla con mensaje — hechos a mano y personalizables.</p>
+          <div class="cta"><button class="btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">¡Haz tu pedido!</button></div>
+        </div>
+      </div>
+      <nav aria-label="Redes sociales">
+        <a href="#" title="Instagram" style="color:var(--muted)">Instagram</a> · <a href="#" title="WhatsApp" style="color:var(--muted)">WhatsApp</a>
+      </nav>
+    </header>
+
+    <!-- SOBRE -->
+    <section id="about">
+      <h2 style="color:var(--accent)">Sobre nuestro trabajo</h2>
+      <p style="color:var(--muted)">Cada mini cuadro está moldeado en arcilla, pintado a mano y sellado para durar. Son perfectos para regalo, decorar escritorios o recordar una frase que inspira el día a día.</p>
+    </section>
+
+    <!-- GALERÍA -->
+    <section id="galeria">
+      <h2 style="color:var(--accent)">Galería</h2>
+      <div class="grid">
+        <article class="card">
+          <img class="mini" src="https://picsum.photos/seed/mini1/800" alt="Mini cuadro 1">
+          <h3>Mini "Valiente"</h3>
+          <p class="price">$12.000 COP</p>
+        </article>
+        <article class="card">
+          <img class="mini" src="https://picsum.photos/seed/mini2/800" alt="Mini cuadro 2">
+          <h3>Mini "Sigue adelante"</h3>
+          <p class="price">$12.000 COP</p>
+        </article>
+        <article class="card">
+          <img class="mini" src="https://picsum.photos/seed/mini3/800" alt="Mini cuadro 3">
+          <h3>Personalizable</h3>
+          <p class="price">$12.000 COP</p>
+        </article>
+      </div>
+      <p style="margin-top:12px;color:var(--muted)">¿Quieres ver más? Pide nuestro catálogo por WhatsApp.</p>
+    </section>
+
+    <!-- PERSONALIZACIÓN / PEDIDO -->
+    <section id="contact">
+      <h2 style="color:var(--accent)">Personaliza tu mini cuadro</h2>
+      <p style="color:var(--muted)">Elige color, mensaje y accesorios. Te responderemos con un boceto y tiempo de entrega.</p>
+      <div style="display:grid;grid-template-columns:1fr 320px;gap:18px;margin-top:12px">
+        <div class="card">
+          <form id="orderForm" onsubmit="placeOrder(event)">
+            <label>Nombre</label>
+            <input type="text" name="name" placeholder="Tu nombre" required>
+
+            <label>Mensaje (máx 40 caracteres)</label>
+            <input type="text" name="message" maxlength="40" placeholder="Ej: Cree en ti">
+
+            <label>Color / Estilo</label>
+            <select name="style">
+              <option>Terracota natural</option>
+              <option>Blanco esmaltado</option>
+              <option>Pastel (rosa, menta)</option>
+              <option>Personalizado</option>
+            </select>
+
+            <label>Comentarios adicionales</label>
+            <textarea name="notes" rows="3" placeholder="Tamaño, fecha de entrega, empaques"></textarea>
+
+            <div style="display:flex;gap:8px;margin-top:10px;align-items:center">
+              <button class="btn" type="submit">Enviar pedido</button>
+              <small style="color:var(--muted)">Nos comunicaremos por WhatsApp o correo</small>
+            </div>
+          </form>
+        </div>
+
+        <aside class="card">
+          <h4 style="color:var(--accent)">Resumen</h4>
+          <p style="color:var(--muted)">Precios aproximados, tiempos y embalaje eco-amigable.</p>
+          <ul>
+            <li>Mini simple: $12.000 COP — 3-5 días hábiles</li>
+            <li>Personalizado: $12.000 COP — 5-8 días hábiles</li>
+            <li>Envíos disponibles en Colombia</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section id="testimonios">
+      <h2 style="color:var(--accent)">Testimonios</h2>
+      <div class="grid">
+        <div class="card"><strong>María P.</strong><p style="color:var(--muted)">"Hermosos y muy delicados. El mensaje vino tal cual lo pedí."</p></div>
+        <div class="card"><strong>Juan R.</strong><p style="color:var(--muted)">"Regalo perfecto para mi novia. Excelente presentación."</p></div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>© <span id="year"></span> Inspiración en Miniatura · Hecho a mano · <a href="#" style="color:var(--muted)">Términos</a></p>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function placeOrder(e){
+      e.preventDefault();
+      const f = new FormData(e.target);
+      const summary = Object.fromEntries(f.entries());
+      alert('Pedido enviado — revisa tu WhatsApp o correo (demo).\n' + JSON.stringify(summary, null, 2));
+      e.target.reset();
+    }
+  </script>
+</body>
+</html>
