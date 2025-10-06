@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Inspiración en Miniatura — Mini cuadros en arcilla</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Inspiración en Miniatura: cuadros pequeños con esculturas en arcilla y mensajes motivacionales, personalizados. Hechos a mano con amor.">
+  <style>
+    :root{
+      --brand-dark:#361702; /* marrón oscuro */
+      --brand-pink:#E58DB1; /* rosa */
+      --brand-mint:#6FEDBD; /* menta */
+      --bg: #fff;
+      --muted: #6b6b6b;
+      --radius: 14px;
+      --max-width: 1100px;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; background:linear-gradient(180deg, #fff 0%, #fffafd 100%); color:var(--brand-dark); -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+      line-height:1.4;
+    }
+    .container{max-width:var(--max-width);margin:0 auto;padding:28px}
+
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .brand{display:flex;gap:14px;align-items:center}
+    .logo{width:68px;height:68px;border-radius:12px;background:linear-gradient(135deg,var(--brand-pink),var(--brand-mint));display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:18px;box-shadow:0 6px 18px rgba(54,23,2,0.08)}
+    .brand h1{margin:0;font-size:20px}
+    nav a{margin-left:18px;text-decoration:none;color:var(--brand-dark);font-weight:600}
+
+    /* HERO */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:36px 0}
+    .hero .eyebrow{display:inline-block;background:var(--brand-mint);color:var(--brand-dark);padding:6px 12px;border-radius:999px;font-weight:700;font-size:13px}
+    .hero h2{font-size:34px;margin:14px 0;color:var(--brand-dark)}
+    .hero p{color:var(--muted);margin:0;font-size:16px}
+    .cta-row{margin-top:20px;display:flex;gap:12px}
+    .btn{padding:12px 18px;border-radius:10px;border:0;font-weight:700;cursor:pointer}
+    .btn-primary{background:var(--brand-dark);color:white}
+    .btn-outline{background:transparent;border:2px solid var(--brand-dark);color:var(--brand-dark)}
+
+    /* hero visual */
+    .mockup{background:linear-gradient(180deg, #fff 0%, #f7f7f7 100%);border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:12px;align-items:center;box-shadow:0 8px 30px rgba(54,23,2,0.06)}
+    .mini-frame{width:320px;height:320px;border-radius:12px;background:#fff;border:6px solid #f3ece7;display:flex;align-items:center;justify-content:center}
+    .mini-sculpt{width:240px;height:240px;border-radius:8px;background:linear-gradient(180deg,var(--brand-pink),#ffd7ec);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--brand-dark)}
+
+    /* gallery */
+    .section{padding:36px 0}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:white;border-radius:12px;padding:14px;border:1px solid #f2ede9;box-shadow:0 6px 20px rgba(54,23,2,0.03);display:flex;flex-direction:column;gap:12px}
+    .card .frame{height:160px;border-radius:8px;background:linear-gradient(180deg,#fff,#fff7f8);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--brand-dark)}
+    .price{font-weight:700}
+    .tag{display:inline-block;padding:6px 10px;border-radius:999px;background:var(--brand-mint);font-weight:700;color:var(--brand-dark);font-size:13px}
+
+    /* about & contact */
+    footer{padding:28px 0;border-top:1px solid #f3ece7;margin-top:20px;color:var(--muted)}
+
+    /* responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr;}
+      .grid{grid-template-columns:repeat(2,1fr)}
+      .container{padding:20px}
+    }
+    @media (max-width:620px){
+      .grid{grid-template-columns:1fr}
+      .brand h1{font-size:16px}
+      .logo{width:56px;height:56px}
+      .hero h2{font-size:26px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">IM</div>
+        <div>
+          <h1>Inspiración en Miniatura</h1>
+          <div style="font-size:12px;color:var(--muted)">Cuadros con esculturas en arcilla · Hecho a mano</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#coleccion">Colección</a>
+        <a href="#personaliza">Personaliza</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <span class="eyebrow">Hecho a mano</span>
+          <h2>Mini cuadros con pequeñas esculturas de arcilla<br><span style="color:var(--brand-pink)">mensajes que inspiran</span></h2>
+          <p>Creaciones únicas, pensadas para regalar o para llevar una pequeña motivación a tu espacio. Personalizamos texto, color y forma.</p>
+
+          <div class="cta-row">
+            <button class="btn btn-primary" onclick="document.getElementById('coleccion').scrollIntoView({behavior:'smooth'})">Ver colección</button>
+            <button class="btn btn-outline" onclick="document.getElementById('personaliza').scrollIntoView({behavior:'smooth'})">Personalizar</button>
+          </div>
+
+          <div style="margin-top:16px;color:var(--muted);font-size:14px">Desde: <span class="price">$45.000 COP</span> · Envíos a toda Colombia</div>
+        </div>
+
+        <aside class="mockup">
+          <div class="mini-frame" aria-hidden="true">
+            <div class="mini-sculpt">Corazoncito<br><small style="display:block;font-weight:600">"Sé valiente"</small></div>
+          </div>
+          <div style="font-size:13px;color:var(--muted)">Formato 10x10 cm — Marco ligero en madera</div>
+        </aside>
+      </section>
+
+      <section id="coleccion" class="section">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+          <h3 style="margin:0">Colección destacada</h3>
+          <div class="tag">Artesanal · Personalizable</div>
+        </div>
+
+        <div class="grid" role="list">
+          <!-- Card 1 -->
+          <article class="card" role="listitem">
+            <div class="frame">Mini flor · "Cree"</div>
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <div>
+                <div style="font-weight:700">Mini Flor</div>
+                <div style="font-size:13px;color:var(--muted)">Arcilla, marco madera</div>
+              </div>
+              <div style="text-align:right">
+                <div class="price">$45.000</div>
+                <div style="font-size:12px;color:var(--muted)">Disponible</div>
+              </div>
+            </div>
+            <div style="display:flex;gap:8px;margin-top:6px">
+              <button class="btn btn-outline" style="flex:1" onclick="openModal('Mini Flor','Una flor pequeña moldeada en arcilla con acabado mate.')">Detalles</button>
+              <button class="btn btn-primary" style="flex:1">Comprar</button>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="card" role="listitem">
+            <div class="frame">Sol · "Brilla"</div>
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <div>
+                <div style="font-weight:700">Mini Sol</div>
+                <div style="font-size:13px;color:var(--muted)">Arcilla, pintura acrílica</div>
+              </div>
+              <div style="text-align:right">
+                <div class="price">$50.000</div>
+                <div style="font-size:12px;color:var(--muted)">Edición limitada</div>
+              </div>
+            </div>
+            <div style="display:flex;gap:8px;margin-top:6px">
+              <button class="btn btn-outline" style="flex:1" onclick="openModal('Mini Sol','Pequeño sol con detalles pintados a mano.')">Detalles</button>
+              <button class="btn btn-primary" style="flex:1">Comprar</button>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="card" role="listitem">
+            <div class="frame">Hoja · "Respira"</div>
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <div>
+                <div style="font-weight:700">Mini Hoja</div>
+                <div style="font-size:13px;color:var(--muted)">Arcilla texturada</div>
+              </div>
+              <div style="text-align:right">
+                <div class="price">$48.000</div>
+                <div style="font-size:12px;color:var(--muted)">Disponible</div>
+              </div>
+            </div>
+            <div style="display:flex;gap:8px;margin-top:6px">
+              <button class="btn btn-outline" style="flex:1" onclick="openModal('Mini Hoja','Hoja pequeña con relieve y pátina suave.')">Detalles</button>
+              <button class="btn btn-primary" style="flex:1">Comprar</button>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <section id="personaliza" class="section">
+        <div style="display:flex;gap:18px;align-items:center">
+          <div style="flex:1">
+            <h3>Personaliza tu mini cuadro</h3>
+            <p style="color:var(--muted);margin-top:6px">Escoge forma, color de arcilla y un mensaje corto (máx. 20 caracteres). Te enviaremos una vista previa antes del envío.</p>
+
+            <form onsubmit="event.preventDefault();alert('Solicitud enviada — te contactaremos por email.');" style="margin-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:10px">
+              <input required placeholder="Tu nombre" style="padding:12px;border-radius:10px;border:1px solid #efe7e2" />
+              <input required type="email" placeholder="Correo electrónico" style="padding:12px;border-radius:10px;border:1px solid #efe7e2" />
+              <select required style="padding:12px;border-radius:10px;border:1px solid #efe7e2">
+                <option value="">Forma: Corazón</option>
+                <option>Corazón</option>
+                <option>Flor</option>
+                <option>Sol</option>
+                <option>Hoja</option>
+              </select>
+              <input maxlength="20" placeholder="Mensaje (máx 20 caracteres)" style="padding:12px;border-radius:10px;border:1px solid #efe7e2" />
+              <textarea placeholder="Notas / color preferido" style="grid-column:1/3;padding:12px;border-radius:10px;border:1px solid #efe7e2"></textarea>
+              <button class="btn btn-primary" style="grid-column:1/3">Enviar personalización</button>
+            </form>
+
+          </div>
+
+          <div style="width:260px;background:linear-gradient(180deg, #fff,#fff7f8);border-radius:12px;padding:14px;box-shadow:0 10px 28px rgba(54,23,2,0.04)">
+            <h4 style="margin:0 0 10px 0">Cómo trabajamos</h4>
+            <ol style="margin:0;padding-left:18px;color:var(--muted)">
+              <li>Confirmas tu diseño y envío</li>
+              <li>Te mandamos vista previa por correo</li>
+              <li>Fabricación 3–5 días hábiles</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer id="contacto">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div>
+          <div style="font-weight:700">Inspiración en Miniatura</div>
+          <div style="font-size:13px;color:var(--muted)">Bogotá, Colombia · envíos nacionales</div>
+        </div>
+        <div style="display:flex;gap:10px;align-items:center">
+          <a href="mailto:hola@inspiracionmin.com" style="text-decoration:none;color:var(--brand-dark);font-weight:700">hola@inspiracionmin.com</a>
+          <div style="font-size:13px;color:var(--muted)">·</div>
+          <div style="font-size:13px;color:var(--muted)">Instagram: @inspiracionmini</div>
+        </div>
+      </div>
+      <div style="margin-top:14px;font-size:13px;color:var(--muted)">© "Inspiración en Miniatura" — Todos los derechos reservados</div>
+    </footer>
+  </div>
+
+  <script>
+    function openModal(title, desc){
+      const modal = document.createElement('div');
+      modal.style.position='fixed';modal.style.inset=0;modal.style.display='flex';modal.style.alignItems='center';modal.style.justifyContent='center';modal.style.background='rgba(0,0,0,0.45)';
+      modal.innerHTML = `
+        <div style="background:#fff;padding:18px;border-radius:12px;max-width:520px;width:92%;box-shadow:0 18px 40px rgba(54,23,2,0.16)">
+          <h3 style="margin:0 0 8px 0">${title}</h3>
+          <p style="color:#6b6b6b;margin:0 0 14px 0">${desc}</p>
+          <div style="display:flex;gap:10px;justify-content:flex-end">
+            <button onclick="this.closest('div[role=modal]')?.parentElement?.remove()" class="btn btn-outline">Cerrar</button>
+            <button class="btn btn-primary" onclick="alert('Añadido al carrito (simulado)')">Añadir al carrito</button>
+          </div>
+        </div>`;
+      // mark for reference when closing
+      modal.querySelector('div').setAttribute('role','modal');
+      modal.addEventListener('click',(e)=>{ if(e.target===modal) modal.remove(); });
+      document.body.appendChild(modal);
+    }
+  </script>
+</body>
+</html>
